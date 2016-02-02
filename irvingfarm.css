@@ -1,5 +1,14 @@
+@font-face{
+    font-family: "Gotham-extra-light";
+    src: url(ufonts.com_gotham-extralight.ttf);
+    font-family: "Gotham-book-opentype";
+    src: url(ufonts.com_gotham-book-opentype.otf);
+}
+
+
 *{
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: "Gotham-book-opentype";
 }
 
 /*Header*/
@@ -25,8 +34,9 @@ header {
 
 #header-button {
     background-color: white;
-    font-size: 1.3em;
-    margin-bottom: 1.3%;
+    font-size: 1em;
+    font-weight: bolder;
+    margin-bottom: 1.2%;
 }
 
 .fa-chevron-down {
@@ -41,15 +51,14 @@ header {
 }
 
 /*Top Nav - Black strip - Account/order buttons*/
-#sub-nav-bar1 {
+#sub-nav-bar{
     width: 100%;
     height: 18%;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     font-size: 0.5em;
 }
 
@@ -64,7 +73,7 @@ header {
 
 #accnt-btns {
     list-style: none;
-    text-align: center;
+/*    text-align: center;*/
     padding-left: 0;
     display: flex;
     justify-content: space-between;
@@ -74,6 +83,7 @@ header {
 #accnt-btns a{
     text-decoration: none;
     color: white;
+    padding-bottom: 0.2em;
 }
 
 #accnt-btns a:after {
@@ -88,4 +98,60 @@ header {
 #accnt-btns a:hover:after {
     width: 100%;
     background: white;
+    margin-top: 5%;
+}
+
+/*Main Navbar -Menu+logo*/
+#main-nav-bar {
+    width: 100%;
+    height: 9.3em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#main-nav-bar img{
+    width: 11.5em;
+    margin: 1em 4em
+    
+}
+
+.menu-links {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin: 6% 3% 3% 1%;
+}
+
+/*Section 1 - About/Stories*/
+#about {
+    width: 100%;
+    height: 22em;
+    background-color: #E1E1E1;
+    margin-top: 4em;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.story-img {
+    margin: 0 0.8em;
+    border-top: 0.35em solid black;
+    border-bottom: 0.35em solid black;
+}
+
+.story-img img{
+    height: 15em;
+    margin: 0;
+}
+
+.story-btn {
+    background-color: white;
+    margin: 0;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;    
 }
