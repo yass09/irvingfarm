@@ -25,16 +25,15 @@ header {
 
 a{
   text-decoration: none;
-    color: black;
+  color: black;
 }
 
 .lg-button {
-    height: 11%;
+    height: 9%;
     width: 12em;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
 }
 
 #header-button {
@@ -44,13 +43,8 @@ a{
     margin-bottom: 1.2%;
 }
 
-.fa-chevron-down {
-    color: white;
-    margin: 0.5%;
-}
-
 #chevron-down {
-    width: 3.2%;
+    min-width: 3.2%;
     height: 4.5%;
     margin: 1.5%;
 }
@@ -89,8 +83,8 @@ a{
     color: white;
     padding-bottom: 0.2em;
 }
-
-.white-links a:after {
+/*link animation*/
+.white-links:after {
     content: '';
     display: block;
     margin: auto;
@@ -99,11 +93,57 @@ a{
     background: transparent;
     transition: width .5s ease;
 }
-.white-links a:hover:after {
+.white-links:hover:after {
     width: 100%;
     background: white;
     margin-top: 5%;
 }
+
+.menu-links:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease;
+}
+.menu-links:hover:after {
+    width: 100%;
+    background: black;
+    margin-top: 5%;
+}
+
+.story-link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease;
+}
+.story-link:hover:after {
+    width: 100%;
+    background: black;
+    margin-top: 1%;
+}
+
+.footer-links:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease;
+}
+.footer-links:hover:after {
+    width: 100%;
+    background: black;
+    margin-top: 0;
+}
+
 
 /*Main Navbar -Menu+logo*/
 #main-nav-bar {
@@ -155,13 +195,17 @@ a{
 
 .story-btn {
     background-color: white;
-    height: 2em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;  
     border-bottom: 0.35em solid black;
-    font-size: 
+    font-size: 0.8em;
+}
+
+.story-link, .footer-links{
+    display: table;
 }
 
 /*Carrousel section*/
@@ -179,7 +223,7 @@ a{
     background-color: white;
     border-top: 0.34em solid black;
     border-bottom: 0.34em solid black;
-    height: 330px;
+    height: 300px;
     width: 420px; 
     display: flex;
     flex-direction: column;
@@ -209,9 +253,8 @@ a{
     padding: 0 0.5em;
 }
 
-.story a {
-   text-decoration: none;
-    color: black;
+.story a{
+    position: relative;
 }
 
 /*Wholesale Section*/
@@ -258,7 +301,18 @@ button {
     background-color: black;
     color: white;
     width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+button p{
     font-size: 0.9em;
+}
+
+
+button .fa{
+    display: none;
+    font-size: 1.5em;
 }
 
 button a{
@@ -319,3 +373,131 @@ footer img {
 .fa {
     margin: 0 2px 
 }
+
+@media all and (max-width: 768px)
+{
+    header{
+        background: url(images/home_main_mobile.jpg) center no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        display: none;
+    }
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    
+    .story-img img{
+        height: 25em;
+    }
+    
+    .story-img{
+        margin: 30px 0;
+        width: auto;
+    }
+    
+    #carrousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .story{
+        margin: 0;
+    }
+    
+    #wholesale{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    #wholesale img, #left-text{
+        height: 300px;
+        margin: 30px 0;
+    }
+    #wholesale img {
+        width: auto;
+    }
+    
+    #left-text{
+        width: 410px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    #left-text h1{
+        margin-top: 20px;
+    }
+    
+    #subscribe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: space-between;
+        height: 150px; 
+    }
+
+    .form{
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px
+    }
+    
+    input{
+        width: 95%;
+    }
+    
+    
+    .form p{
+        display: none;
+    }
+    
+    button{
+        width: 20%;
+    }
+    
+    button .fa{
+        display: block;
+    }
+    
+
+    #subscribe-text{
+        font-size: 0.6em;
+        text-align: center
+    }
+    
+    footer img{
+        display: none;
+    }
+    
+    footer{
+        display: flex;
+        align-items: center;
+        height: 600px;
+    }
+    
+    .links-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+         
+    
+    .footer-linkgroups, .social-buttons{
+        justify-content: center;
+        align-items: center;
+        margin: 20px 100px;
+        text-align: center;
+    }
+}
+
+
+
