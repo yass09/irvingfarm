@@ -11,6 +11,39 @@
     font-family: "Gotham-book-opentype";
 }
 
+/*responsive nav*/
+#responsive-nav{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: none;
+    color: white;
+}
+
+#responsive-logo {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: #878787;
+    border: 2px solid #909090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#responsive-logo img{
+    height: 28px;
+    width: auto;
+    margin: 0;  
+}
+
+#responsive-logo i{
+    margin: 0 50px;
+}
+
+
 /*Header*/
 header {
     width: 100%;
@@ -497,7 +530,16 @@ footer img {
         margin: 20px 100px;
         text-align: center;
     }
+    
+    #responsive-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #responsive-nav i{
+        margin: 0 15px
+    }
 }
-
 
 
